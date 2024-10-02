@@ -5,8 +5,11 @@ use mergesort::mergesort;
 
 fn main() {
 
-    let mut disorder = rand_vec(10); 
-
+    let mut disorder = rand_vec(10);
     println!("{:?}", disorder);
-    mergesort(&mut disorder);
+
+    let end: usize = disorder.len() - 1;
+    mergesort(&mut disorder,0, end);
+
+    println!("Test mergesort: {:?}",disorder);
 }
