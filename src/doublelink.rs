@@ -6,12 +6,14 @@ struct Node {
 
 pub struct DoubleLink {
     head: Option<Box<Node>>,
+    tail: Option<Box<Node>>,
 } 
 
 impl DoubleLink {
     pub fn new() -> Self {
         DoubleLink {
             head: None,
+            tail: None,
         } 
     }
 
@@ -32,6 +34,17 @@ impl DoubleLink {
             new_node.prev = Some(old_head); // Nuevo nodo prev apunta a la antigua cabeza
             self.head = Some(new_node); // Actualizamos la cabeza
         }
+    }
+
+    pub fn display(&mut self) {
+
+        let mut current = &self.head;
+        while let Some(node) = current {
+            print!("{} -> ", node.data);
+            current = &node.prev;
+        }
+        print!("None");
+
     }
 }
 
