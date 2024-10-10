@@ -34,6 +34,8 @@ impl DoubleLink {
             new_node.prev = Some(old_head); // Nuevo nodo prev apunta a la antigua cabeza
             self.head = Some(new_node); // Actualizamos la cabeza
         }
+
+
     }
 
     pub fn display(&mut self) {
