@@ -16,6 +16,12 @@ fn main() {
     // let mut list = DoubleLink::new();
     // list.insert(1);
     // list.insert(2);
+    let mut heap = Heap::new(); 
+    heap.add(1);
+    heap.add(2);
+    heap.add(3);
+    heap.add(4);
+    heap.display();
 
 }
 
